@@ -5,7 +5,7 @@ This repository has been created in order to fulfill the fourth homework of Robo
 ###      🔨 Build
 First of all, clone this repository in your ros2_ws/src folder
 ```
-git clone https://github.com/PasFar/Homework-4.git
+git clone https://github.com/giancorr/Homework-4.git
 ```
 Then, build the packages using the following command inside the ros2_ws folder and source the setup.bash file 
 ```
@@ -34,14 +34,14 @@ This will open rviz with the configuration "explore.rviz".
 Finally, open another terminal, connect to the same docker container and run:
    ```
    . install/setup.bash
-   ros2 run rl_fra2mo_description follow_waypoints waypoints
+   ros2 run rl_fra2mo_description follow_waypoints.py waypoints
    ```
 The robot will move to the assigned waypoint described in the config/waypoints.yaml file with the order (3)->(4)->(2)->(1).
 Trajectories results can be seen in the related report.
 
 In order to test the mapping feature the commands are the same except for the last one which is: 
    ```
-   ros2 run rl_fra2mo_description follow_waypoints mapping
+   ros2 run rl_fra2mo_description follow_waypoints.py mapping
    ```
 The manipulator will move and map his sourroundings. The map results can be seen in the related report. 
 In this case the given waypoints will be the ones in config/mapping.yaml.
@@ -76,5 +76,5 @@ If you want to also check the detected aruco pose with respect to the map frame 
    . install/setup.bash
    ros2 topic echo /aruco_pose_in_map
    ```
-The robot will reach a position close to the aruco marker, detect it and then head back to the starting position.
+The robot will reach a position close to the aruco marker, wait for its detection and then head back to the starting position.
 Results and documentation will be found in the attached report. 
