@@ -1,0 +1,57 @@
+waypoints:
+  - position: #0
+      x: 5.9
+      y: 4.36
+      z: 0.0
+    orientation:
+      roll: 0.0
+      pitch: 0.0
+      yaw: -1.57
+  - position: #1
+      x: 9.3
+      y: 0.16
+      z: 0.0
+    orientation:
+      roll: 0.0
+      pitch: 0.0
+      yaw: 0.0
+  - position: #2
+      x: 4.0
+      y: 0.16
+      z: 0.0
+    orientation:
+      roll: 0.0
+      pitch: 0.0
+      yaw: 0.523
+  - position: #3
+      x: 1.75
+      y: 0.16
+      z: 0.0
+    orientation: 
+      roll: 0.0
+      pitch: 0.0
+      yaw: 0.0
+  - position: #4
+      x: 1.95
+      y: -4.65
+      z: 0.0
+    orientation:
+      roll: 0.0
+      pitch: 0.0
+      yaw: 0.0
+  - position: #5
+      x: -7.38
+      y: -1.91
+      z: 0.0
+    orientation:
+      roll: 0.0
+      pitch: 0.0
+      yaw: 0.0
+
+      
+            
+
+
+
+
+

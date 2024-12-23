@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="obstacle_09">
+    <static>true</static>
+    <link name="link">
+      <pose>0 0 0 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+            <mesh>
+              <uri>
+                model://obstacle_09/mesh/ostacolo_09.stl
+              </uri>
+              <scale>
+                0.001 0.001 0.001
+              </scale>
+            </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+            <mesh>
+              <uri>
+                model://obstacle_09/mesh/ostacolo_09.stl
+              </uri>
+              <scale>
+                0.001 0.001 0.001
+              </scale>
+            </mesh>
+        </geometry>
+        <material> <!-- color yellow -->
+          <ambient>0.9098 0.9020 0.2941 1</ambient>
+          <diffuse>0.9098 0.9020 0.2941 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material> 
+      </visual>
+    </link>
+
+    <!-- Nuovo link per l'ArUco tag -->
+    <link name="aruco_link">
+      <pose>1 -0.01 0.2 1.57 0 0</pose> <!-- Posizione relativa all'ostacolo -->
+      <visual name="aruco_visual">
+        <geometry>
+          <plane>
+            <size>0.1 0.1</size> <!-- Dimensioni del piano del tag -->
+          </plane>
+        </geometry>
+        <material>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0.4 0.4 0.4 1</specular>
+          <pbr>
+            <metal>
+              <albedo_map>model://obstacle_09/aruco-115.png</albedo_map>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Giunto fisso per collegare l'ArUco all'ostacolo -->
+    <joint name="aruco_joint" type="fixed">
+      <parent>link</parent>
+      <child>aruco_link</child>
+    </joint>
+
+  </model>
+</sdf>
